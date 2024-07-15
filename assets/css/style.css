@@ -9,7 +9,6 @@
 }
 
 :root {
-    --img-bg: url("https://th.bing.com/th/id/OIP.Zk8iB_t-CO30zV17b5vkLgHaEK?w=329&h=185&c=7&r=0&o=5&pid=1.7") top center/cover;
     --color-bg: rgb(1, 14, 43);
     --color-white: #fff;
     --color-black: #000;
@@ -18,9 +17,12 @@
 }
 
 .ativo {
+    position: relative;
+    display: flex;
+    margin-left: -1rem;
     background: var(--color-white);
     color: #000;
-    padding: 1rem 1.8rem;
+    padding: 1rem 2rem;
     border-radius: 25px;
 }
 
@@ -30,8 +32,7 @@
 }
 
 body {
-    /* background: url('https://th.bing.com/th/id/OIG1.K3XJqxiTQxtnXvbeVdxB?w=270&h=270&c=6&r=0&o=5&pid=ImgGn') top center/cover; */
-    background: url('https://th.bing.com/th/id/OIG1.r0MnXQJdK6X0wWG0gmEb?w=270&h=270&c=6&r=0&o=5&pid=ImgGn') top center/cover;
+    background: url('https://th.bing.com/th/id/OIG1.r0MnXQJdK6X0wWG0gmEb?w=270&h=270&c=6&r=0&o=5&pid=ImgGn') no-repeat top center/cover;
     backdrop-filter: blur(10px);
     color: var(--color-white);
     display: flex;
@@ -73,7 +74,7 @@ h1,p {
 
 /* LabelLinks */
 
-div#container div#labelLinks {
+div#container div#switchLinks {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,14 +83,14 @@ div#container div#labelLinks {
     cursor: pointer;
 }
 
-div#container div#labelLinks #tituloLinks {
+div#container div#switchLinks #tituloLinks {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
     background-color: var(--transparente-black);
     border-radius: 30px;
-    padding: 0 1rem 0 0;
+    padding: 0 1rem 0 1rem;
 }
 
 
