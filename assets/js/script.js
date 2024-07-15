@@ -1,22 +1,7 @@
 // Selecionando Arquivos
-const tituloDosLinksShop = document.querySelector('#switch h2#shop');
-const tituloDosLinks2 = document.querySelector('#switch h2#links2');
-const containerLinks = document.querySelector('#containerLinks');
-const switchLinks = document.querySelector('#switchLinks');
+const inputCheckbox = document.querySelector("div#switchLinks input");
+const containerLinks = document.querySelector("div#containerLinks");
 
-tituloDosLinksShop.addEventListener('click', () => {
-    if(tituloDosLinks2.classList.contains('ativo')) {
-        tituloDosLinks2.classList.remove('ativo');
-        tituloDosLinksShop.classList.add('ativo');       
-    } 
-    containerLinks.style.opacity = '0';
-    tituloDosLinksShop.style.marginRight = '-1rem';
+inputCheckbox.addEventListener('click', () => {
+    containerLinks.classList.toggle('desativo');
 });
-
-tituloDosLinks2.addEventListener('click', () => {
-    if(tituloDosLinksShop.classList.contains('ativo')) {
-        tituloDosLinksShop.classList.remove('ativo');
-        tituloDosLinks2.classList.add('ativo');
-    } 
-    containerLinks.style.opacity = '1';
-})

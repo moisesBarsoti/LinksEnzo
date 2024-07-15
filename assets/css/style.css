@@ -52,10 +52,17 @@ div#conteudo img{
 
 /* Nome e a frase de efeito*/
 
+h1 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
 h1,p {
     font-family: 'Archivo Black';
 }
-
 
 /* switchLinks */
 
@@ -68,22 +75,58 @@ div#container div#switchLinks {
     cursor: pointer;
 }
 
-div#container div#switchLinks div#switch {
+input[type="checkbox"] {
+    appearance: none;
+    width: 140px;
+    height: 60px;
+    background-color: var(--transparente-black);
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: .3s;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 4rem;
-    padding: 0rem 3rem;
-    border-radius: 30px;
-    background-color: var(--transparente-black);
-    width: 20rem;
+    width: 70px;
+    height: 60px;
+    background-color: var(--color-white);
+    border-radius: 50%;
+    left: 2px;
+    transition: .3s;
 }
 
-div#container div#switchLinks #switch h2.ativo {
-    padding: 1rem 3rem;
-    border-radius: 20px;
-    background: #fff;
-    color: #000;
+input[type="checkbox"]::after {
+    content: "Links";
+    position: absolute;
+    color: var(--color-black);
+    font-size: 20px;
+    left: 12px;
+    top: 19px;
+    transition: .3s;
+}
+
+input[type="checkbox"]:checked {
+    background: var(--color-black);
+}
+
+input[type="checkbox"]:checked:before {
+    background: var(--color-white);
+    left: 65px;
+}
+
+input[type="checkbox"]:checked:after {
+    content: "Shop";
+    color: var(--color-black);
+    left: 78px;
+}
+
+.desativo {
+    opacity: 0;
 }
 
 /* Links */
@@ -103,12 +146,16 @@ div#container div#containerLinks a {
     gap: .5rem;
     margin-top: 2rem;
     color: var(--color-black);
-    border: solid 1px #f1f50e;
-    padding: 1.3rem 13rem;
+    border: solid 1px var(--color-black);
+    padding: 1.5rem 13rem;
     border-radius: 30px;
     font-weight: bold;
     font-size: 1.2rem;
     transition: .8s;
+}
+
+div#container div#containerLinks a:first-child {
+    box-shadow: 0 0 20px var(--color-white);
 }
 
 div#container div#containerLinks a:hover {
