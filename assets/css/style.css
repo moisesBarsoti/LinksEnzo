@@ -17,8 +17,8 @@
 }
 
 body {
-    background: url('https://th.bing.com/th/id/OIG1.r0MnXQJdK6X0wWG0gmEb?w=270&h=270&c=6&r=0&o=5&pid=ImgGn') no-repeat top center/cover;
-    backdrop-filter: blur(10px);
+    background: url('https://th.bing.com/th/id/OIG4.5PJ1gpdn8Te2FriM7pP3?w=270&h=270&c=6&r=0&o=5&pid=ImgGn') no-repeat top center/cover;
+    backdrop-filter: blur(20px);
     color: var(--color-white);
     display: flex;
     justify-content: center;
@@ -30,7 +30,6 @@ div#container {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-top: -10rem;
 }
 
 /* Conteudo */
@@ -77,9 +76,9 @@ div#container div#switchLinks {
 
 input[type="checkbox"] {
     appearance: none;
-    width: 140px;
+    width: 120px;
     height: 60px;
-    background-color: var(--transparente-black);
+    background-color: var(--transparente-white);
     border-radius: 50px;
     position: relative;
     cursor: pointer;
@@ -111,18 +110,18 @@ input[type="checkbox"]::after {
 }
 
 input[type="checkbox"]:checked {
-    background: var(--color-black);
+    background: var(--transparente-white);
 }
 
 input[type="checkbox"]:checked:before {
     background: var(--color-white);
-    left: 65px;
+    left: 50px;
 }
 
 input[type="checkbox"]:checked:after {
     content: "Shop";
     color: var(--color-black);
-    left: 78px;
+    left: 65px;
 }
 
 .desativo {
@@ -170,4 +169,52 @@ div#container div#containerLinks a:hover {
     html {
         font-size: 70%;
     }
+
+    input[type="checkbox"] {
+        appearance: none;
+        width: 120px;
+        height: 40px;
+        background-color: var(--transparente-white);
+        border-radius: 50px;
+        position: relative;
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    input[type="checkbox"]::before {
+        content: "";
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 50px;
+        background-color: var(--color-white);
+        border-radius: 100%;
+        top: -5px;
+        left: 1px;
+        transition: .3s;
+    }
+
+    input[type="checkbox"]::after {
+        content: "Links";
+        position: absolute;
+        color: var(--color-black);
+        font-size: 20px;
+        left: 8px;
+        top: 10px;
+        transition: .3s;
+    }
+
+    input[type="checkbox"]:checked:before {
+        background: var(--color-white);
+        left: 65px;
+    }
+
+    input[type="checkbox"]:checked:after {
+        content: "Shop";
+        color: var(--color-black);
+        left: 74px;
+    }
+
 }
