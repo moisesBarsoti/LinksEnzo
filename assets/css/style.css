@@ -128,6 +128,26 @@ input[type="checkbox"]:checked:after {
     opacity: 0;
 }
 
+/* Shop */
+
+div#shop div#forms {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#shop div#forms div.containerForm {
+    border: solid 1px #fff;
+    border-radius: 10px;
+    padding: 6rem 4rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+
 /* Links */
 
 div#container div#containerLinks {
@@ -135,6 +155,14 @@ div#container div#containerLinks {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+}
+
+div#containerLinks div#links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 10rem;
 }
 
 div#container div#containerLinks a {
@@ -217,4 +245,4 @@ div#container div#containerLinks a:hover {
         left: 74px;
     }
 
-}
+} 
