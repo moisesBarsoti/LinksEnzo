@@ -154,5 +154,8 @@ div#container div#shop {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.opacity0 {
   opacity: 0;
 }
