@@ -26,6 +26,26 @@ body {
   min-height: 100vh;
 }
 
+/* Abertura de apresentação */
+
+div#apresentacao {
+  position: absolute;
+  background: var(--color-black);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  z-index: 1;
+}
+
+div#apresentacao h1 {
+  color: var(--white);
+  font-size: 2.5rem;
+}
+
 /* Container */
 
 div#container div#conteudo {
@@ -108,7 +128,6 @@ input[type="checkbox"]:checked:after {
   left: 65px;
 }
 
-
 /* Links  */
 
 div#container div#links {
@@ -146,7 +165,6 @@ div#container div#links a:hover {
   transform: translateY(50vh);
 }
 
-
 /* Shop */ 
 
 div#container div#shop {
@@ -158,4 +176,21 @@ div#container div#shop {
 
 .opacity0 {
   opacity: 0;
+}
+
+/* Animações */
+
+@keyframes aparecer {
+  from {
+      transform: translateY(0);
+  }
+
+  to {
+      z-index: -1;
+  }
+}
+
+div#apresentacao {
+  animation: aparecer 6s ease-in-out;
+  transform: translateY(-100vh);
 }
