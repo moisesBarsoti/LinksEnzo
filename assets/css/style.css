@@ -1,248 +1,158 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    outline: none;
-    text-decoration: none;
-    list-style: none;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+  overflow-y: hidden;
 }
 
 :root {
-    --color-bg: rgb(1, 14, 43);
-    --color-white: #fff;
-    --color-black: #000;
-    --transparente-black: rgba(0,0,0,.8);
-    --transparente-white: rgba(255,255,255,.7)
+  --bg: #080808;
+  --color-white: #fff;
+  --color-black: #000;
+  --transparente-black: rgba(0,0,0,.8);
+  --transparente-white: rgba(255,255,255,.7)
 }
 
 body {
-    background: url('https://th.bing.com/th/id/OIG4.5PJ1gpdn8Te2FriM7pP3?w=270&h=270&c=6&r=0&o=5&pid=ImgGn') no-repeat top center/cover;
-    backdrop-filter: blur(20px);
-    color: var(--color-white);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  background: var(--bg);
+  color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-div#container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+/* Container */
+
+div#container div#conteudo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-/* Conteudo */
-
-/* Img */
-
-div#conteudo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-div#conteudo img{
-    width: 150px;
-    border-radius: 50%;
-}
-
-/* Nome e a frase de efeito*/
-
-h1 {
-    font-size: 2rem;
-}
-
-p {
-    font-size: 1.1rem;
+div#container div#conteudo img {
+  width: 200px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px;
+  margin: 10px 0;
 }
 
 h1,p {
-    font-family: 'Archivo Black';
+  font-family: 'Archivo Black';
 }
 
-/* switchLinks */
+/* Switch */
 
 div#container div#switchLinks {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 3.5rem;
-    font-size: .8rem;
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3.5rem;
+  font-size: .8rem;
+  cursor: pointer;
 }
 
 input[type="checkbox"] {
-    appearance: none;
-    width: 120px;
-    height: 60px;
-    background-color: var(--transparente-white);
-    border-radius: 50px;
-    position: relative;
-    cursor: pointer;
-    transition: .3s;
+  appearance: none;
+  width: 120px;
+  height: 60px;
+  background-color: var(--transparente-white);
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  transition: .3s;
 }
 
 input[type="checkbox"]::before {
-    content: "";
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 70px;
-    height: 60px;
-    background-color: var(--color-white);
-    border-radius: 50%;
-    left: 2px;
-    transition: .3s;
+  content: "";
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 60px;
+  background-color: var(--color-white);
+  border-radius: 50%;
+  left: 2px;
+  transition: .3s;
 }
 
 input[type="checkbox"]::after {
-    content: "Links";
-    position: absolute;
-    color: var(--color-black);
-    font-size: 20px;
-    left: 12px;
-    top: 19px;
-    transition: .3s;
+  content: "Links";
+  position: absolute;
+  color: var(--color-black);
+  font-size: 20px;
+  left: 12px;
+  top: 19px;
+  transition: .3s;
 }
 
 input[type="checkbox"]:checked {
-    background: var(--transparente-white);
+  background: var(--transparente-white);
 }
 
 input[type="checkbox"]:checked:before {
-    background: var(--color-white);
-    left: 50px;
+  background: var(--color-white);
+  left: 50px;
 }
 
 input[type="checkbox"]:checked:after {
-    content: "Shop";
-    color: var(--color-black);
-    left: 65px;
-}
-
-.desativo {
-    opacity: 0;
-}
-
-/* Shop */
-
-div#shop div#forms {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-div#shop div#forms div.containerForm {
-    border: solid 1px #fff;
-    border-radius: 10px;
-    padding: 6rem 4rem;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  content: "Shop";
+  color: var(--color-black);
+  left: 65px;
 }
 
 
+/* Links  */
 
-/* Links */
-
-div#container div#containerLinks {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+div#container div#links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 0;
 }
 
-div#containerLinks div#links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-left: 10rem;
+div#container div#links a {
+  color: var(--color-black);
+  background-color: var(--color-white);
+  width: 100%;
+  height: 3rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: .5s;
 }
 
-div#container div#containerLinks a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--transparente-white);
-    gap: .5rem;
-    margin-top: 2rem;
-    color: var(--color-black);
-    border: solid 1px var(--color-black);
-    padding: 1.5rem 13rem;
-    border-radius: 30px;
-    font-weight: bold;
-    font-size: 1.2rem;
-    transition: .8s;
+div#container div#links a:first-child {
+  box-shadow: 0 0 10px var(--transparente-white);
 }
 
-div#container div#containerLinks a:first-child {
-    box-shadow: 0 0 20px var(--color-white);
+div#container div#links a:hover {
+  background-color: var(--transparente-white);
 }
 
-div#container div#containerLinks a:hover {
-    background: var(--color-white);
-    color: var(--color-black);
+.irParaBaixo {
+  position: absolute;
+  transform: translateY(50vh);
 }
 
 
-/* Responsividade */
+/* Shop */ 
 
-@media (width < 40rem) {
-    html {
-        font-size: 70%;
-    }
-
-    input[type="checkbox"] {
-        appearance: none;
-        width: 120px;
-        height: 40px;
-        background-color: var(--transparente-white);
-        border-radius: 50px;
-        position: relative;
-        cursor: pointer;
-        transition: .3s;
-    }
-
-    input[type="checkbox"]::before {
-        content: "";
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 60px;
-        height: 50px;
-        background-color: var(--color-white);
-        border-radius: 100%;
-        top: -5px;
-        left: 1px;
-        transition: .3s;
-    }
-
-    input[type="checkbox"]::after {
-        content: "Links";
-        position: absolute;
-        color: var(--color-black);
-        font-size: 20px;
-        left: 8px;
-        top: 10px;
-        transition: .3s;
-    }
-
-    input[type="checkbox"]:checked:before {
-        background: var(--color-white);
-        left: 65px;
-    }
-
-    input[type="checkbox"]:checked:after {
-        content: "Shop";
-        color: var(--color-black);
-        left: 74px;
-    }
-
-} 
+div#container div#shop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+}
