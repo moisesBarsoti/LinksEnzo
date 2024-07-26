@@ -30,7 +30,7 @@ body {
 
 div#apresentacao {
   position: absolute;
-  background: var(--color-black);
+  background: var(--bg);
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -193,4 +193,12 @@ div#container div#shop {
 div#apresentacao {
   animation: aparecer 6s ease-in-out;
   transform: translateY(-100vh);
+}
+
+/* Responsividade */
+
+@media (width < 40rem) {
+  html {
+    font-size: 70%;
+  }
 }
